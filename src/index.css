@@ -46,23 +46,22 @@ body {
   margin-left: 8px;
 }
 
-.circle.white {
+.white {
   background-color: #f0f0f0;
 }
-
-.circle.black {
+.black {
   background-color: #222;
 }
 
-.circle.blue {
+.blue {
   background-color: #3b82f6;
 }
 
-.circle.purple {
+.purple {
   background-color: #8b5cf6;
 }
 
-.circle.pink {
+.pink {
   background-color: #ec4899;
 }
 
@@ -163,7 +162,7 @@ button:hover {
 /* Task list container */
 .todo-list ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   gap: 20px;
   padding: 0;
   list-style-type: none;
@@ -187,12 +186,16 @@ button:hover {
 
 /* Task title and timestamp */
 .task-info {
-  max-width: 75%;
+  max-width: 80%;
+  margin-top: 10px;
+
 }
 
 .task-title {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
+  font-style: italic;
+  font-family: A;
   color: #333;
   margin-bottom: 5px;
 }
@@ -221,3 +224,23 @@ button:hover {
 .task-actions .delete {
   color: #dc3545;
 }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  80%{
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.todo-list ul li {
+  animation: jump 0.5s ease-in-out;
+}
+
